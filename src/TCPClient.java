@@ -11,8 +11,8 @@ import java.net.Socket;
  * Assignment: Project1
  */
 public class TCPClient {
-//    public static int arrayLength;
-    public static String[] fileNames;
+    //    public static int arrayLength;
+    private static String[] fileNames;
 
 
     private Socket socket;
@@ -77,10 +77,7 @@ public class TCPClient {
             fileNames = new String[args.length];
 
 
-//            arrayLength = args.length;
-//            System.arraycopy(args, 0, fileNames, 0, fileNames.length);
             for (int i = 0; i < fileNames.length; i++) {
-
 //                Create file object  to convert into canonical (abs)  path from relative path
                 fileConvert = new File(args[i]);
                 String absFileName = fileConvert.getCanonicalPath();
